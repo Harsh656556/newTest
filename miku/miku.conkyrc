@@ -1,0 +1,26 @@
+conky.config = {
+    alignment = 'bottom_right',
+    gap_x = 20,
+    gap_y = 50,
+    minimum_width = 300,
+    minimum_height = 350,
+
+    -- Transparency Fix for KDE Plasma
+    own_window = true,
+    own_window_type = 'normal',
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+    -- Drawing Settings
+    double_buffer = true,
+    update_interval = 0.1,
+
+    -- Load the Lua script
+    lua_load = '/home/harsh/.config/conky/miku/miku.lua',
+    lua_draw_hook_post = 'miku_animation',
+    lua_mouse_hook = 'my_mouse_handler',
+}
+
+conky.text = [[]] -- Keep this empty as Lua is doing the drawing
